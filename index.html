@@ -6,7 +6,9 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="Stylesheet">
+    <link rel="stylesheet" href="./swiperjs/swiper-bundle.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./swiperjs/swiper-bundle.min.js" ></script>
     <style>
         table,tr,th,td{
             border-collapse: collapse;
@@ -24,7 +26,7 @@
     <a id="scrollToTop" class="fixed bottom-5 right-5 hidden bg-blue-500 text-white py-3 px-4 rounded-full shadow-lg " href="#"><span class="material-symbols-outlined text-4xl">arrow_upward</span></a>
 
     <!-- Sidebar and Header -->
-    <div id="nav" class="flex sticky top-0 ">
+    <div id="nav" class="flex sticky top-0 z-20">
         <div id="sidebar" class="border-r-2 border-blue-900 fixed bottom-0 top-16 md:inset-y-0 left-0 bg-blue-950 transform -translate-x-full transition-all duration-300 w-52 pt-4 overflow-y-auto">
             <div class="text-3xl text-blue-500 hidden md:flex mb-4 pl-5">
                 <i class="fa fa-user-edit mr-2"></i>
@@ -125,6 +127,186 @@
                 </li>
             </ul>
         </header>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="transition-all duration-300">
+        <!-- slider image -->
+        <div class="swiper-container grid grid-cols-1 mx-6 mt-6 border-2 border-blue-900 rounded-lg bg-blue-950 h-[485px] relative overflow-hidden pt-4 px-12">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide box-border ">
+                    <img src="./images/nature1.jpg" class="w-full h-[450px] " alt="Photo1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/nature2.jpg" class="w-full h-[450px] " alt="Photo2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/nature3.jpg" class="w-full h-[450px] " alt="Photo3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/nature4.jpg" class="w-full h-[450px] " alt="Photo4">
+                </div>
+            </div>
+            <div class="swiper-button-prev absolute left-3"></div>
+            <div class="swiper-button-next absolute right-3"></div>
+        </div>
+
+        <!-- mini carts -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 p-6 gap-6">
+            <div class="flex items-center justify-between bg-blue-950 border-2 border-blue-900 rounded-lg p-3 w-full ">
+                <i class="text-5xl fa fa-chart-line"></i>
+                <div class="text-xl">
+                    <p>Today Sale</p>
+                    <p class="text-white">$1234</p>
+                </div>  
+            </div>
+            <div class="flex items-center justify-between bg-blue-950 border-2 border-blue-900 rounded-lg p-3 w-full ">
+                <i class="text-5xl fa fa-chart-bar"></i>
+                <div class="text-xl">
+                    <p>Total Sale</p>
+                    <p class="text-white">$1234</p>
+                </div>  
+            </div>
+            <div class="flex items-center justify-between bg-blue-950 border-2 border-blue-900 rounded-lg p-3 w-full ">
+                <i class="text-5xl fa fa-chart-area"></i>
+                <div class="text-xl">
+                    <p>Today Revenue</p>
+                    <p class="text-white">$1234</p>
+                </div>  
+            </div>
+            <div class="flex items-center justify-between bg-blue-950 border-2 border-blue-900 rounded-lg p-3 w-full ">
+                <i class="text-5xl fa fa-chart-pie"></i>
+                <div class="text-xl">
+                    <p>Total Revenue</p>
+                    <p class="text-white">$1234</p>
+                </div>  
+            </div>
+        </div>
+
+        <!-- Users information -->
+        <div class="recent-salse grid grid-cols-1 mx-6 border-2 border-blue-900 rounded-lg p-4 bg-blue-950">
+            <div class="flex justify-between text-lg font-semibold mb-4 ">
+                <h2 class="text-white ">Users information</h2>
+                <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+            </div>
+            <table class="border-2 bg-blue-900 border-gray-400 " id="users-table">
+                <tr class="text-white ">
+                    <th class="px-1 border-2 border-gray-400 py-2">id</th>
+                    <th class="px-1 border-2 border-gray-400">name</th>
+                    <th class="px-1 border-2 border-gray-400">username</th>
+                    <th class="px-1 border-2 border-gray-400">phone</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- messages calendar to do list -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 px-6 mt-6">
+            <div id="message" class="bg-blue-950 border-2 border-blue-900 rounded-lg p-4">
+                <div class="flex justify-between text-lg font-semibold mb-3 ">
+                    <h2 class="text-white ">Messages</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+
+                <div class="flex">
+                    <div class="photo w-1/6 mr-4">
+                        <img src="formal-photo.jpg" class="w-full rounded-full" alt="">
+                    </div>
+                    <div class="w-5/6 flex flex-col justify-between ">
+                        <div class="flex justify-between ">
+                            <h2>Mohammad Jm</h2>
+                            <h2>15 minutes ago</h2>
+                        </div>
+                        <h2>short message goes here</h2>
+                    </div>
+                </div>
+                <hr class="px-4 my-4 border-2 boder-gray-400">
+                <div class="flex">
+                    <div class="photo w-1/6 mr-4">
+                        <img src="formal-photo.jpg" class="w-full rounded-full" alt="">
+                    </div>
+                    <div class="w-5/6 flex flex-col justify-between ">
+                        <div class="flex justify-between ">
+                            <h2>Mohammad Jm</h2>
+                            <h2>15 minutes ago</h2>
+                        </div>
+                        <h2>short message goes here</h2>
+                    </div>
+                </div>
+                <hr class="px-4 my-4 border-2 boder-gray-400">
+                <div class="flex">
+                    <div class="photo w-1/6 mr-4">
+                        <img src="formal-photo.jpg" class="w-full rounded-full" alt="">
+                    </div>
+                    <div class="w-5/6 flex flex-col justify-between ">
+                        <div class="flex justify-between ">
+                            <h2>Mohammad Jm</h2>
+                            <h2>15 minutes ago</h2>
+                        </div>
+                        <h2>short message goes here</h2>
+                    </div>
+                </div>
+                <hr class="px-4 my-4 border-2 boder-gray-400">
+                <div class="flex">
+                    <div class="photo w-1/6 mr-4">
+                        <img src="formal-photo.jpg" class="w-full rounded-full" alt="">
+                    </div>
+                    <div class="w-5/6 flex flex-col justify-between">
+                        <div class="flex justify-between">
+                            <h2>Mohammad Jm</h2>
+                            <h2>15 minutes ago</h2>
+                        </div>
+                        <h2 >short message goes here</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-950 calendar border-2 border-blue-900 rounded-lg p-4 flex flex-col ">
+                <div class="flex justify-between text-lg font-semibold ">
+                    <h2 class="text-white ">Calendar</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <div class="flex justify-between items-center my-2">
+                    <button id="prev" class="text-gray-400 rounded"><span class="material-symbols-outlined hover:bg-white hover:text-blue-950 py-1 px-2 rounded-xl text-4xl">arrow_back</span></button>
+                    <span id="monthYear" class="font-bold text-xl hover:bg-white hover:text-blue-950 py-2 px-4 rounded-xl cursor-pointer"></span>
+                    <button id="next" class="text-gray-400 rounded"><span class="material-symbols-outlined hover:bg-white hover:text-blue-950 py-1 px-2 rounded-xl text-4xl">arrow_forward</span></button>                
+                </div>
+                <table id="calendar" class="w-full text-center border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border-none px-2 py-1">Su</th>
+                            <th class="border-none px-2 py-1">Mo</th>
+                            <th class="border-none px-2 py-1">Tu</th>
+                            <th class="border-none px-2 py-1">We</th>
+                            <th class="border-none px-2 py-1">Th</th>
+                            <th class="border-none px-2 py-1">Fr</th>
+                            <th class="border-none px-2 py-1">Sa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody"></tbody>
+                </table>
+            </div>
+            <div id="to-do-list" class="bg-blue-950 p-4 border-2 border-blue-900 rounded-lg">
+                <div class="flex justify-between text-lg font-semibold mb-4">
+                    <h2 class="text-white ">To Do List</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <table class="border-2 bg-blue-900 border-gray-400 w-full " id="todo-table">
+                    <tr class="text-white ">
+                        <th class="px-1 border-2 border-gray-400 py-2 w-[10%]">id</th>
+                        <th class="px-1 border-2 border-gray-400 w-[60%]">title</th>
+                        <th class="px-1 border-2 border-gray-400 w-[30%]">completed</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="bg-blue-950 flex justify-between mx-6 mt-6 p-4 border-2 border-blue-900 border-b-0 rounded-t-lg">
+            <div>© Your Site Name, All Right Reserved.</div>
+            <div>
+                <h2>Designed By HTML Codex</h2> 
+                <h2>Distributed By: ThemeWagon</h2> 
+            </div>
+        </footer>
     </div>
 </body>
 </html>
