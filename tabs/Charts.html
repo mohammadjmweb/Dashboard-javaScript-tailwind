@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="Stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-gray-400 bg-black m-0 p-0 overflow-x-auto">
+    <!-- Loader -->
+    <div id="loader" class="flex items-center justify-center fixed top-0 left-0 w-full h-full bg-black z-20 ">
+        <div class="loader w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin "></div>
+    </div>
+
+    <!-- Scroll To Top -->
+    <a id="scrollToTop" class="fixed bottom-5 right-5 hidden bg-blue-500 text-white py-3 px-4 rounded-full shadow-lg " href="#"><span class="material-symbols-outlined text-4xl">arrow_upward</span></a>
+    
+    <!-- Sidebar and Menu -->
+    <div id="nav" class="flex sticky top-0 ">
+        <div id="sidebar" class="border-r-2 border-blue-900 fixed bottom-0 top-16 md:inset-y-0 left-0 bg-blue-950 transform -translate-x-full transition-all duration-300 w-52 pt-4 overflow-y-auto">
+            <div class="text-3xl text-blue-500 hidden md:flex mb-4 pl-5">
+                <i class="fa fa-user-edit mr-2"></i>
+                <p class="font-bold">Darkpan</p> 
+            </div>
+            <div class="flex py-2 pl-5">
+                <img src="formal-photo.jpg" alt="" class="w-[48px] rounded-full mr-2">
+                <div>
+                    <h2 class="text-white font-bold">Mohammad Jm</h2>
+                    <h2>Admin</h2>
+                </div>
+            </div>
+            <a href="../index.html" class="flex items-center mr-6  px-4 py-2 rounded-r-full  duration-300 hover:bg-black hover:text-blue-500 hover:font-semibold hover:border-l-4 hover:border-l-blue-500 cursor-pointer">
+                <i class="fa fa-tachometer-alt text-blue-500 text-2xl bg-blue-900 py-2 px-3 rounded-full mr-2"></i>
+                <p>Dashboard</p>
+            </a>
+            <a href="#" class="flex items-center mr-6 pl-4 px-4 py-2 rounded-r-full  bg-black border-l-4 border-l-blue-500 cursor-pointer ">
+                <i class="fa fa-chart-bar text-2xl py-2 px-3 rounded-full mr-2 bg-blue-900 "></i>
+                <p class="text-blue-500 font-semibold" >Charts</p>
+            </a>
+            <a href="./signUp.html" class="flex items-center mr-6 pl-4 px-4 py-2 rounded-r-full hover:border-l-4 hover:border-l-blue-500 duration-300 hover:bg-black hover:text-blue-500 hover:font-semibold cursor-pointer">
+                <i class="fa fa-file-alt text-2xl py-2 px-4 rounded-full mr-2 bg-blue-900"></i>
+                <p>Sign Up</p>
+            </a>
+        </div>
+        
+        <header id="header" class="bg-blue-950 border-b-2 border-blue-900 h-16 flex items-center justify-between transition-all duration-300 w-full pl-3">
+            <ul class="flex items-center">
+                <i class="fa fa-user-edit mr-3 md:hidden text-3xl text-blue-700 cursor-pointer"></i>
+                <button id="toggle-btn" class="mr-2 border-0"><i class="fa fa-bars bg-black text-blue-700 rounded-full box-border px-2 py-1 text-xl hover:text-blue-900"></i></button>
+                <input type="search" class="w-full max-w-sm mx-2 px-3 py-1 bg-black focus:border-4 focus:border-blue-700 outline-none rounded-lg hidden md:block " placeholder="Search">
+            </ul>
+            <ul class="flex ">
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative">
+                    <i class="fa fa-envelope mr-2 px-2 py-1 text-xl bg-black rounded-full"></i>
+                    <p class="text-lg hidden lg:block ">Message</p>
+                    <span class="arrow material-symbols-outlined transition-all duration-300 pt-1">stat_minus_1</span> 
+                    <div class="hidden absolute top-[51px] left-[-24px] w-[250px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent ">
+                        <div class="flex p-2 hover:bg-black ">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex p-2 hover:bg-black">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex p-2 hover:bg-black">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <h2 class="text-gray-400 text-center py-2 hover:bg-black rounded-b-lg"> all messages</h2>
+                    </div> 
+                </li>
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative ">
+                    <i class="fa fa-bell mr-2 px-2 py-1 text-xl bg-black rounded-full "></i>
+                    <p class="text-lg hidden lg:block ">Notification</p> 
+                    <span class="arrow material-symbols-outlined transition-all duration-300  pt-1">stat_minus_1</span>
+                    <div class="hidden absolute top-[51px] right-0 w-[160px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent ">
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold ">profile updated</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold">New user added</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold ">Password changed</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <h2 class="text-gray-400 text-center py-2 hover:bg-black rounded-b-lg"> See all notifications</h2>
+                    </div> 
+                    
+                </li>
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative ">
+                    <img src="formal-photo.jpg" class="w-[36px] h-[36px] mr-2 rounded-full " alt="">
+                    <p class="text-lg hidden lg:block ">Mohammad Jm</p> 
+                    <span class="arrow material-symbols-outlined transition-all duration-300 pt-1">stat_minus_1</span> 
+                    <div class="hidden absolute top-[51px] right-0 w-[150px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent py-2">
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">My Profile</h2>
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">Settings</h2>
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">Log Out</h2>
+                    </div> 
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="transition-all duration-300 h-screen flex flex-col justify-between">
+        <!-- Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 px-6 gap-6 pt-6">
+            <div class=" w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[400px] border-2 border-blue-900 pt-4 px-4 pb-12 rounded-lg bg-blue-950">
+                <div class="flex justify-between text-lg font-semibold mb-4 ">
+                    <h2 class="text-white ">Worldwide Sales</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <canvas class="" id="myChart1"></canvas> 
+            </div>
+            <div class=" w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[400px] border-2 border-blue-900 pt-4 px-4 pb-12 rounded-lg bg-blue-950">
+                <div class="flex justify-between text-lg font-semibold mb-4 ">
+                    <h2 class="text-white ">Salse & Revenue</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <canvas class="" id="myChart2"></canvas> 
+            </div>
+            <div class=" w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[600px] border-2 border-blue-900 pt-4 px-4 pb-16 rounded-lg bg-blue-950">
+                <div class="flex justify-between text-lg font-semibold mb-4 ">
+                    <h2 class="text-white ">Pie Chart</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <canvas class="" id="myChart3"></canvas> 
+            </div>
+            <div class=" w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[600px] border-2 border-blue-900 pt-4 px-4 pb-16 rounded-lg bg-blue-950">
+                <div class="flex justify-between text-lg font-semibold mb-4 ">
+                    <h2 class="text-white ">Doughnut Chart</h2>
+                    <a class="text-blue-500 hover:text-blue-700" href="">Show All</a>
+                </div>
+                <canvas class="" id="myChart4"></canvas> 
+            </div>
+        </div>
+        
+        <footer class="bg-blue-950 flex justify-between mx-6 mt-6 p-4 border-2 border-blue-900 border-b-0 rounded-t-lg">
+            <div>© Your Site Name, All Right Reserved.</div>
+            <div>
+                <h2>Designed By HTML Codex</h2> 
+                <h2>Distributed By: ThemeWagon</h2> 
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/Charts.js" ></script>
+</body>
+</html>
