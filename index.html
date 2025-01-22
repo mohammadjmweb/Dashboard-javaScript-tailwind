@@ -23,5 +23,108 @@
     <!-- scrollTop -->
     <a id="scrollToTop" class="fixed bottom-5 right-5 hidden bg-blue-500 text-white py-3 px-4 rounded-full shadow-lg " href="#"><span class="material-symbols-outlined text-4xl">arrow_upward</span></a>
 
+    <!-- Sidebar and Header -->
+    <div id="nav" class="flex sticky top-0 ">
+        <div id="sidebar" class="border-r-2 border-blue-900 fixed bottom-0 top-16 md:inset-y-0 left-0 bg-blue-950 transform -translate-x-full transition-all duration-300 w-52 pt-4 overflow-y-auto">
+            <div class="text-3xl text-blue-500 hidden md:flex mb-4 pl-5">
+                <i class="fa fa-user-edit mr-2"></i>
+                <p class="font-bold">Darkpan</p> 
+            </div>
+            <div class="flex py-2 pl-5">
+                <img src="./images/formal-photo.jpg" alt="" class="w-[48px] rounded-full mr-2">
+                <div>
+                    <h2 class="text-white font-bold">Mohammad Jm</h2>
+                    <h2>Admin</h2>
+                </div>
+            </div>
+            <a href="#" class="flex items-center mr-6 border-l-4 border-l-blue-500 px-4 py-2 rounded-r-full bg-black cursor-pointer">
+                <i class="fa fa-tachometer-alt text-blue-500 text-2xl bg-blue-900 py-2 px-3 rounded-full mr-2"></i>
+                <p class="text-blue-500 font-semibold">Dashboard</p>
+            </a>
+            <a href="./tabs/Charts.html" class="flex items-center mr-6 pl-4 px-4 py-2 rounded-r-full hover:border-l-4 hover:border-l-blue-500 duration-300 hover:bg-black hover:text-blue-500 hover:font-semibold cursor-pointer ">
+                <i class="fa fa-chart-bar text-2xl py-2 px-3 rounded-full mr-2 bg-blue-900"></i>
+                <p>Charts</p>
+            </a>
+            <a href="./tabs/signUp.html" class="flex items-center mr-6 pl-4 px-4 py-2 rounded-r-full hover:border-l-4 hover:border-l-blue-500 duration-300 hover:bg-black hover:text-blue-500 hover:font-semibold cursor-pointer">
+                <i class="fa fa-file-alt text-2xl py-2 px-4 rounded-full mr-2 bg-blue-900"></i>
+                <p>Sign Up</p>
+            </a>
+        </div>
+        <header id="header" class="bg-blue-950 border-b-2 border-blue-900 h-16 flex items-center justify-between transition-all duration-300 w-full pl-3">
+            <ul class="flex items-center">
+                <i class="fa fa-user-edit mr-3 md:hidden text-3xl text-blue-700 cursor-pointer"></i>
+                <button id="toggle-btn" class="mr-2 border-0"><i class="fa fa-bars bg-black text-blue-700 rounded-full box-border px-2 py-1 text-xl hover:text-blue-900"></i></button>
+                <input type="search" class="w-full max-w-sm mx-2 px-3 py-1 bg-black focus:border-4 focus:border-blue-700 outline-none rounded-lg hidden md:block " placeholder="Search">
+            </ul>
+            <ul class="flex ">
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative">
+                    <i class="fa fa-envelope mr-2 px-2 py-1 text-xl bg-black rounded-full"></i>
+                    <p class="text-lg hidden lg:block ">Message</p>
+                    <span class="arrow material-symbols-outlined transition-all duration-300 pt-1">stat_minus_1</span> 
+                    <div class="hidden absolute top-[51px] left-[-24px] w-[250px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent ">
+                        <div class="flex p-2 hover:bg-black ">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex p-2 hover:bg-black">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex p-2 hover:bg-black">
+                            <img class="w-[70px] h-[70px] mr-2 rounded-full" src="formal-photo.jpg" alt="">
+                            <div class="flex flex-col">
+                                <h2 class="text-white font-bold ">Mohammad Jm <br> sent you a message</h2>
+                                <h2 class="text-gray-400">15 minutes ago</h2>
+                            </div>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <h2 class="text-gray-400 text-center py-2 hover:bg-black rounded-b-lg"> all messages</h2>
+                    </div> 
+                </li>
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative ">
+                    <i class="fa fa-bell mr-2 px-2 py-1 text-xl bg-black rounded-full "></i>
+                    <p class="text-lg hidden lg:block ">Notification</p> 
+                    <span class="arrow material-symbols-outlined transition-all duration-300  pt-1">stat_minus_1</span>
+                    <div class="hidden absolute top-[51px] right-0 w-[160px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent ">
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold ">profile updated</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold">New user added</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <div class="flex flex-col hover:bg-black p-2">
+                            <h2 class="text-white font-bold ">Password changed</h2>
+                            <h2 class="text-gray-400">15 minutes ago</h2>
+                        </div>
+                        <hr class="border-gray-400" >
+                        <h2 class="text-gray-400 text-center py-2 hover:bg-black rounded-b-lg"> See all notifications</h2>
+                    </div> 
+                    
+                </li>
+                <li class="right-header mx-2 flex items-center cursor-pointer hover:text-blue-500 relative ">
+                    <img src="formal-photo.jpg" class="w-[36px] h-[36px] mr-2 rounded-full " alt="">
+                    <p class="text-lg hidden lg:block ">Mohammad Jm</p> 
+                    <span class="arrow material-symbols-outlined transition-all duration-300 pt-1">stat_minus_1</span> 
+                    <div class="hidden absolute top-[51px] right-0 w-[150px] bg-blue-950 border-2 border-blue-900 rounded-b-lg border-t-transparent py-2">
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">My Profile</h2>
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">Settings</h2>
+                        <h2 class="text-gray-400 hover:bg-black px-2 text text-center">Log Out</h2>
+                    </div> 
+                </li>
+            </ul>
+        </header>
+    </div>
 </body>
 </html>
